@@ -1,0 +1,141 @@
+/* Tags */
+
+  html 
+  {
+    scrollbar-gutter: stable;
+  }
+
+  body 
+  {
+    font-family: "Montserrat", sans-serif;
+    background: #333333; 
+	  background-image: linear-gradient(to left, #252525 0%, black 10%, black 90%, #252525 100%); 
+    color: white;
+  }
+
+  p, li
+  {
+    font-size: 1.25em;
+  }
+
+  h1
+  {
+    font-family: 'Ubuntu';
+    font-size: 2.5em;
+    text-transform: uppercase;
+    background: linear-gradient(to bottom, #ffffff, #878787);
+    background-clip: text;
+    color: transparent;
+  }
+
+  footer
+  {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3em; 
+    word-spacing: 0.25em;
+
+  }
+
+  a:link 
+  { 
+    text-decoration: none; 
+  }
+
+  a:hover
+  {
+    color: #862fe2;
+  }
+
+  a.navbar-brand:hover
+  {
+    color: black;
+    background-color: #ccc;
+  }
+
+  p a:link 
+  { 
+    text-decoration: underline; 
+  }
+
+/* ########## */
+
+
+
+/* Classes */
+
+  /* :after makes it appear after the text */
+  h1:after
+  {
+    content:"";
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(255, 255, 255, 1), rgba(0, 0, 0, 0));
+    /* Fade from left */
+  }
+
+  .mainPage 
+  {
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .navbarButton
+  {
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+  }
+
+  .gameLogo, .gameLogoGlow
+  {
+    width:50vw;
+    -webkit-box-reflect: below -25% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+  }
+
+  .gameLogoGlow
+  {
+    z-index: 2;
+    opacity: 0%;
+    transition: opacity 0.5s linear;
+  }
+
+  .gameLogoGlow:hover
+  {
+    opacity: 100%;
+  }
+
+/* ########## */
+
+
+
+/* Fonts */
+
+  @font-face 
+  {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/ubuntu/v20/4iCs6KVjbNBYlgoKfw72.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face 
+  {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* ########## */

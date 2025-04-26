@@ -1,0 +1,283 @@
+/* Tags */
+  
+  body 
+  {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+  }
+
+  .fadeBG
+  {
+    position: fixed;
+    background-image: linear-gradient(to right, rgba(50, 14, 95, 0.5) 0%, #000000 10%, #000000 90%, rgba(50, 14, 95, 0.5) 100%),
+                      linear-gradient(to bottom, rgba(2, 110, 252, 0.5) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(2, 110, 252, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+    z-index : -1;
+    /* Place the fade separately here so it doesn't get moved with the background*/
+  }
+
+
+
+  body::before 
+  {
+    content: '';
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-position: var(--bg-pos, 50% 50%);
+    background-image: url(" ../media/eternalSoul/diamond.png");
+}
+
+  ul
+  {
+    list-style-image: url("../media/eternalSoul/arrow.png");
+  }
+
+  li#manifest
+  {
+    list-style-image: url("../media/eternalSoul/soul1.png");
+  }
+
+  li#augment
+  {
+    list-style-image: url("../media/eternalSoul/soul2.png");
+  }
+
+  li#guardian
+  {
+    list-style-image: url("../media/eternalSoul/soul3.png");
+  }
+
+  li#passive
+  {
+    list-style-image: url("../media/eternalSoul/soul4.png");
+  }
+
+  ul.listSpacing li
+  {
+    padding: 0.25em;
+  }
+  /* Just using li causes it to affect the navbar*/
+
+  p, li
+  {
+    font-size: 1.25em;
+  }
+
+  h1, h2, h3
+  {
+    font-family: Linbertine;
+  }
+
+  h1, h2
+  {
+    font-size: 2.5em;
+    text-transform: uppercase;
+
+    background: linear-gradient(to bottom, #F9d350, #ab6814);
+    background-clip: text;
+    color: transparent;
+  }
+
+  h3
+  {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+  }
+
+  h4 
+  {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+
+  footer
+  {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3em; 
+    word-spacing: 0.25em;
+  }
+
+  a:hover
+  {
+    color: #862fe2;
+  }
+
+  a.navbar-brand:hover
+  {
+    color: black;
+    background-color: #ccc;
+  }
+
+  li a:link 
+  { 
+    text-decoration: underline; 
+  }
+
+/* ########## */
+
+
+
+/* Classes */
+
+  /* :after makes it appear after the text */
+  h1:after
+  {
+    content:"";
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, rgba(171, 104, 20, 1), rgba(249, 211, 80, 0.5), rgba(171, 104, 20, 0));
+    /* Fade from left */
+  }
+
+  /* Select h1 elements that appear inside a text-center div or have text-center applied directly */
+  .text-center h1:after, h1.text-center:after
+  {
+    background: linear-gradient(to right, rgba(171, 104, 20, 0), rgba(249, 211, 80, 1), rgba(171, 104, 20, 0));
+    /* Fade from middle */
+  }
+
+  h2:after
+  {
+    content:"";
+    background: linear-gradient(to right, rgba(171, 104, 20, 1), rgba(249, 211, 80, 0.5), rgba(171, 104, 20, 0));
+    display: block;
+    height: 2px;
+  }
+
+  .mainPage 
+  {
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .navbarButton
+  {
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    text-decoration: none !important;
+  }
+
+  .reflect
+  {
+    -webkit-box-reflect: below -10% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+  }
+
+  .gameLogo, .gameLogoReflection
+  {
+    width: 50vw;
+    min-width: 300px;
+    -webkit-box-reflect: below -25% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+  }
+
+  /* Reflection effect for Firefox 
+     This is only worth doing if the effect can also be
+     done on the home page. This is difficult due to the glow.
+     So just disable all this for the time being.
+
+  .gameLogoReflection 
+  {
+    top: 25vw;
+    opacity: 0.5;
+    position: absolute;
+    transform: scaleY(-1);
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%);
+  }
+
+  @supports (-webkit-box-reflect: below) 
+  {
+    .gameLogoReflection 
+    {
+      display: none;
+    }
+    .gameLogo 
+    {
+      -webkit-box-reflect: below -25% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+    }
+  }
+  */
+
+/* ########## */
+
+
+
+/* Swiper */
+
+  .swiper
+  {
+    z-index: 0 !important;
+    /* Place below navbar */ 
+
+    max-width: 960px;
+    max-height: 720px;
+    /* Limit max image size */
+
+    user-select: none; 
+    /* Disable highlighting */
+  }
+
+  .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet
+  {
+    filter: drop-shadow(0 0 2px white);
+    image-rendering: pixelated;
+  }
+
+  .swiper-button-next, .swiper-button-prev
+  {
+    content: url("../media/eternalSoul/arrow.png ");
+  }
+
+  .swiper-button-prev
+  {
+    transform: scaleX(-1);
+    /* Flip the back button */
+  }
+
+  .swiper-pagination-bullet
+  {
+    content: url("../media/eternalSoul/heart.png ");
+    min-width:28px;
+    min-height:28px;
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 0% !important;
+    /* Override the blue background and circular border */
+  }
+
+/* ########## */
+
+
+
+/* Fonts */
+
+  @font-face 
+  {
+    font-family: 'Linbertine';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/LinLibertine.ttf')  format('truetype');	
+  }
+
+  @font-face 
+  {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* ########## */
