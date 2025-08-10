@@ -1,0 +1,148 @@
+/* Tags */
+  
+  body 
+  {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+  }
+
+  .fadeBG
+  {
+    position: fixed;
+    background-image: linear-gradient(to right, rgba(50, 14, 95, 0.5) 0%, #000000 10%, #000000 90%, rgba(50, 14, 95, 0.5) 100%),
+                      linear-gradient(to bottom, rgba(2, 110, 252, 0.5) 0%, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 0) 95%, rgba(2, 110, 252, 0.5) 100%);
+    width: 100%;
+    height: 100%;
+    z-index : -1;
+    /* Place the fade separately here so it doesn't get moved with the background*/
+  }
+
+  body::before 
+  {
+    content: '';
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-position: var(--bg-pos, 50% 50%);
+    background-image: url(" ../media/newsletter/diamond.png");
+  }
+
+  p, li
+  {
+    font-size: 1.25em;
+  }
+
+  h1, h2
+  {
+    font-family: Linbertine;
+    font-size: 2.5em;
+    text-transform: uppercase;
+
+    background: linear-gradient(to bottom, #F9d350, #ab6814);
+    background-clip: text;
+    color: transparent;
+  }
+
+  footer
+  {
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 3em; 
+    word-spacing: 0.25em;
+  }
+
+  a:hover
+  {
+    color: #862fe2;
+  }
+
+  a.navbar-brand:hover
+  {
+    color: black;
+    background-color: #ccc;
+  }
+
+  li a:link 
+  { 
+    text-decoration: underline; 
+  }
+
+/* ########## */
+
+
+
+/* Classes */
+
+  /* :after makes it appear after the text */
+  h1:after
+  {
+    content:"";
+    display: block;
+    height: 2px;
+    background: linear-gradient(to right, rgba(171, 104, 20, 1), rgba(249, 211, 80, 0.5), rgba(171, 104, 20, 0));
+    /* Fade from left */
+  }
+
+  /* Select h1 elements that appear inside a text-center div or have text-center applied directly */
+  .text-center h1:after, h1.text-center:after
+  {
+    background: linear-gradient(to right, rgba(171, 104, 20, 0), rgba(249, 211, 80, 1), rgba(171, 104, 20, 0));
+    /* Fade from middle */
+  }
+
+  .mainPage 
+  {
+    padding-left: 9vw;
+    padding-right: 9vw;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
+
+  .navbarButton
+  {
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    text-decoration: none !important;
+  }
+
+  .reflect
+  {
+    -webkit-box-reflect: below -10% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+  }
+
+  .gameLogo, .gameLogoReflection
+  {
+    width: 50vw;
+    min-width: 300px;
+    -webkit-box-reflect: below -25% linear-gradient(to bottom, rgba(0,0,0,0) 55%, rgba(0,0,0,0.2) 100%);
+  }
+
+/* Fonts */
+
+  @font-face 
+  {
+    font-family: 'Linbertine';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/LinLibertine.ttf')  format('truetype');	
+  }
+
+  @font-face 
+  {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/montserrat/v29/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFgpCtr6Hw5aXo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+/* ########## */
