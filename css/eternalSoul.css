@@ -37,22 +37,22 @@
 
   li#manifest
   {
-    list-style-image: url("../media/eternalSoul/soul1.png");
+    list-style-image: url("../media/eternalSoul/Soul1.png");
   }
 
   li#augment
   {
-    list-style-image: url("../media/eternalSoul/soul2.png");
+    list-style-image: url("../media/eternalSoul/Soul2.png");
   }
 
   li#guardian
   {
-    list-style-image: url("../media/eternalSoul/soul3.png");
+    list-style-image: url("../media/eternalSoul/Soul3.png");
   }
 
   li#passive
   {
-    list-style-image: url("../media/eternalSoul/soul4.png");
+    list-style-image: url("../media/eternalSoul/Soul4.png");
   }
 
   ul.listSpacing li
