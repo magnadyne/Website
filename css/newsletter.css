@@ -72,6 +72,14 @@
     text-decoration: underline; 
   }
 
+  iframe
+  {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    max-width: 960px;
+    /* Match Screenshot size and scale with screen size */
+  }
+
 /* ########## */
 
 
